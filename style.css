@@ -1,12 +1,12 @@
-* { 
+body { 
   font-family: 'Lato', sans-serif;
+  background-color: #F1EAFF;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .newGame {
@@ -14,16 +14,116 @@
   display: flex;
   justify-content: center;
   font-size: 2rem;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 .fa-plus {
   font-size: 20px;
+  color: #B15EFF; 
+  margin-top: 10px;
+  margin-right: 5px;
 }
 
 .player1 {
   font-size: 1.5em;
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.totalPointsP1 { 
+  color: #B15EFF;
+  font-size: 1.5em;
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
 }
 
 .player2 {
   font-size: 1.5em;
+  grid-column: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.totalPointsP2 { 
+  color: #B15EFF;
+  font-size: 1.5em;
+  grid-column: 3;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.dice {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-arrow-rotate-right {
+  font-size: 20px;
+  color: #B15EFF; 
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.roll {
+  grid-column: 2;
+  grid-row: 4;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.fa-floppy-disk {
+  font-size: 20px;
+  color: #B15EFF; 
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.hold {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.meterTitleP1 {
+  background-color: #DCBFFF;
+  grid-column: 1;
+  grid-row: 4;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.meterP1 {
+  color: #B15EFF;
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.meterTitleP2 {
+  background-color: #DCBFFF;
+  grid-column: 3;
+  grid-row: 4;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.meterP2 {
+  color: #B15EFF;
+  grid-column: 3;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
 }

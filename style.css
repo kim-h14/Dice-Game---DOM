@@ -1,0 +1,29 @@
+* { 
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.newGame {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.fa-plus {
+  font-size: 20px;
+}
+
+.player1 {
+  font-size: 1.5em;
+}
+
+.player2 {
+  font-size: 1.5em;
+}

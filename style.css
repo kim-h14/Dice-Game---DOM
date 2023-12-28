@@ -33,7 +33,7 @@ body {
   justify-content: center;
 }
 
-.totalPointsP1 { 
+.globalP1 { 
   color: #B15EFF;
   font-size: 1.5em;
   grid-column: 1;
@@ -49,7 +49,7 @@ body {
   justify-content: center;
 }
 
-.totalPointsP2 { 
+.globalP2 { 
   color: #B15EFF;
   font-size: 1.5em;
   grid-column: 3;
@@ -63,6 +63,10 @@ body {
   grid-row: 3;
   display: flex;
   justify-content: center;
+}
+.diceImg {
+  width: 100px;
+ margin-bottom: 50px;
 }
 
 .fa-arrow-rotate-right {
@@ -94,6 +98,11 @@ body {
   font-size: 30px;
 }
 
+/* .btn {
+  display: flex;
+  justify-content: center;
+} */
+
 .meterTitleP1 {
   background-color: #DCBFFF;
   grid-column: 1;
@@ -103,7 +112,7 @@ body {
   font-size: 20px;
 }
 
-.meterP1 {
+.roundP1 {
   color: #B15EFF;
   grid-column: 1;
   display: flex;
@@ -120,7 +129,7 @@ body {
   font-size: 20px;
 }
 
-.meterP2 {
+.roundP2 {
   color: #B15EFF;
   grid-column: 3;
   display: flex;

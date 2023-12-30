@@ -8,10 +8,14 @@ function rollDiceClick() {
   let image = "images/dice-" + randomNumber + ".png";
 
   document.querySelector(".dice .diceImg").setAttribute("src",image);
-  // Random number adds value to current round
+  // Random number adds value to current round except if number = 1 then currentround goes back to 0
   let currentRound = randomNumber;
-  document.querySelector(".roundP2").innerHTML = currentRound;
-
-  // Current increases with value of random number after each click
+  
+  if (currentRound === 1) {
+    document.querySelector(".roundP2").innerHTML = "0";
+  }
+  else {
+    let currentRound = randomNumber;
+    document.querySelector(".roundP2").innerHTML = currentRound;
+  }
 }
-

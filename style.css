@@ -17,6 +17,9 @@ body {
   margin-top: 25px;
   margin-bottom: 20px;
 }
+.game {
+  font-size: 2rem;
+}
 
 .fa-plus {
   font-size: 20px;

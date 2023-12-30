@@ -31,6 +31,7 @@ function rollDiceClick() {
   // Update the HTML with the new value for current round
   document.querySelector(".roundP" + currentPlayer).innerHTML = currentRound;
 
+  turnIndicator()
   checkWinner()
 }
 
@@ -57,6 +58,7 @@ function holdScoreClick() {
   document.querySelector(".roundP" + currentPlayer).innerHTML = currentRound;
 
   switchPlayer()
+  turnIndicator()
   checkWinner()
 }
 
@@ -81,6 +83,8 @@ function newGame() {
   document.querySelector(".globalP2").innerHTML = globalP2;
   document.querySelector(".roundP1").innerHTML = currentRound;
   document.querySelector(".roundP2").innerHTML = currentRound;
+
+  turnIndicator()
 }
 
 
@@ -95,3 +99,18 @@ function checkWinner() {
     newGame();
   }
 } 
+
+// Dice emoji appears when it's player's turn to play
+
+function turnIndicator() {
+  // Reset indicators 
+  document.querySelector(".player1Indicator").style.display = "none";
+  document.querySelector(".player2Indicator").style.display = "none";
+
+  // Show the emoji for the current player
+  if (currentPlayer === 1) {
+    document.querySelector(".player1Indicator").style.display = "inline-flex";
+  } else {
+    document.querySelector(".player2Indicator").style.display = "inline-block";
+  }
+}

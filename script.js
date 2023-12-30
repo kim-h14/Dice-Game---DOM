@@ -101,15 +101,37 @@ function newGame() {
 
 // Function to check winner
 
+// function checkWinner() {
+//   if (globalP1 >= 100) {
+//     alert("🎉 Player 1 Wins 🎉")
+//     newGame();
+//   } else if (globalP2 >= 100) {
+//     alert("🎉 Player 2 Wins 🎉")
+//     newGame();
+//   }
+// } 
+
 function checkWinner() {
+  let winnerMessage = "";
+  let modal = document.getElementById("winnerModal");
+  let winnerContent = document.getElementById("winnerMessage");
+
   if (globalP1 >= 100) {
-    alert("🎉 Player 1 Wins 🎉")
-    newGame();
+    winnerMessage = "🎉 Player 1 Wins 🎉";
+    modal.style.display = "block";
   } else if (globalP2 >= 100) {
-    alert("🎉 Player 2 Wins 🎉")
-    newGame();
+    winnerMessage = "🎉 Player 2 Wins 🎉";
+    modal.style.display = "block";
   }
-} 
+
+  winnerContent.innerText = winnerMessage;
+}
+
+function closeModal() {
+  document.getElementById("winnerModal").style.display = "none";
+  newGame();
+}
+
 
 // Dice emoji appears when it's player's turn to play
 

@@ -30,6 +30,8 @@ function rollDiceClick() {
   }
   // Update the HTML with the new value for current round
   document.querySelector(".roundP" + currentPlayer).innerHTML = currentRound;
+
+  checkWinner()
 }
 
 
@@ -41,7 +43,7 @@ function holdScoreClick() {
   // add round value to global
   if (currentRound > 0) {
     if (currentPlayer === 1) {
-      globalP1 =+ currentRound
+      globalP1 += currentRound
     } else {
       globalP2 += currentRound
     }
@@ -55,6 +57,7 @@ function holdScoreClick() {
   document.querySelector(".roundP" + currentPlayer).innerHTML = currentRound;
 
   switchPlayer()
+  checkWinner()
 }
 
 function switchPlayer() {
@@ -67,10 +70,28 @@ document.querySelector("button.game").addEventListener("click", newGame);
 
 // function linked to event listener to start new game
 function newGame() {
+  // Reset all scores
+  currentRound = 0;
+  globalP1 = 0;
+  globalP2 = 0;
+  currentPlayer = 1;
 
+  // Update HTML
+  document.querySelector(".globalP1").innerHTML = globalP1;
+  document.querySelector(".globalP2").innerHTML = globalP2;
+  document.querySelector(".roundP1").innerHTML = currentRound;
+  document.querySelector(".roundP2").innerHTML = currentRound;
 }
 
 
-// Winner loop 
+// Function to check winner
 
-// for (const i = 0; querySelector("globalP1"))
+function checkWinner() {
+  if (globalP1 >= 100) {
+    alert("🎉 Player 1 Wins 🎉")
+    newGame();
+  } else if (globalP2 >= 100) {
+    alert("🎉 Player 2 Wins 🎉")
+    newGame();
+  }
+} 

@@ -12,8 +12,18 @@ function rollDiceClick() {
   let diceValue = Math.floor(Math.random()*6) + 1;
   let image = "images/dice-" + diceValue + ".png";
 
-  document.querySelector(".dice .diceImg").setAttribute("src",image);
+  let dice = document.querySelector(".dice .diceImg");
 
+  //Add spin class to trigger spin animation 
+  dice.classList.add("spin");
+
+  setTimeout(() => {
+    // update img
+    dice.setAttribute("src", image);
+
+    dice.classList.remove("spin");
+  }, 500);
+  
   // Get the current round value from the HTML and convert it to a number
   currentRound = parseInt(document.querySelector(".roundP" + currentPlayer).innerHTML);
 
@@ -23,6 +33,7 @@ function rollDiceClick() {
 
   if (diceValue === 1) {
     currentRound = 0;
+    document.querySelector(".roundP" + currentPlayer).innerHTML = currentRound;
     switchPlayer();
   }
   else {

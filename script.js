@@ -1,3 +1,8 @@
+let currentRound = 0;
+let globalP1 = 0;
+let globalP2 = 0;
+let currentPlayer =1;
+
 // Add Event listener to button Roll Dice
 
 document.querySelector("button.roll").addEventListener("click", rollDiceClick);
@@ -10,7 +15,7 @@ function rollDiceClick() {
   document.querySelector(".dice .diceImg").setAttribute("src",image);
 
   // Get the current round value from the HTML and convert it to a number
-  let currentRound = parseInt(document.querySelector(".roundP2").innerHTML);
+  currentRound = parseInt(document.querySelector(".roundP" + currentPlayer).innerHTML);
 
   if (isNaN(currentRound)) {
     currentRound = 0;
@@ -18,27 +23,47 @@ function rollDiceClick() {
 
   if (diceValue === 1) {
     currentRound = 0;
+    switchPlayer();
   }
   else {
     currentRound += diceValue;
   }
   // Update the HTML with the new value for current round
-  document.querySelector(".roundP2").innerHTML = currentRound;
+  document.querySelector(".roundP" + currentPlayer).innerHTML = currentRound;
 }
 
 
 // Add Event listener to button Hold
 
-// document.querySelector("button.hold").addEventListener("click", holdScoreClick);
+document.querySelector("button.hold").addEventListener("click", holdScoreClick);
 
-// function linked to event listener to hold score
 function holdScoreClick() {
+  // add round value to global
+  if (currentRound > 0) {
+    if (currentPlayer === 1) {
+      globalP1 =+ currentRound
+    } else {
+      globalP2 += currentRound
+    }
+  }
+  
+  currentRound = 0;
 
+  // Update HTML with new values
+  document.querySelector(".globalP1").innerHTML = globalP1;
+  document.querySelector(".globalP2").innerHTML = globalP2;
+  document.querySelector(".roundP" + currentPlayer).innerHTML = currentRound;
+
+  switchPlayer()
+}
+
+function switchPlayer() {
+  currentPlayer = currentPlayer === 1 ? 2 : 1;
 }
 
 // Add Add Event listener to button New Game
 
-// document.querySelector("button.game").addEventListener("click", newGame);
+document.querySelector("button.game").addEventListener("click", newGame);
 
 // function linked to event listener to start new game
 function newGame() {

@@ -18,7 +18,7 @@ During his turn, the player can decide at any time to:
 The first player to reach 100 points on Global wins the game.
 
 ### Languages and Frameworks: HTML, CSS, JavaScript and Bootstrap
-It was mainly used to work on a JS wrapup praticularly working on functions and if statements.
+This project was mainly used to work on a JS wrapup praticularly working on functions and if statements.
 
 
 * French version: *
@@ -41,4 +41,4 @@ Lors de son tour, le joueur peut décider à tout moment de:
 Le premier joueur qui atteint les 100 points sur Global gagne le jeu.
 
 ### Langages and Frameworks: HTML, CSS, JavaScript et Bootstrap
-Il a été principalement utilisé pour travailler sur une synthèse de connaissances en JS, en particulier sur les fonctions et les instructions if.
+Ce projet a été principalement utilisé pour travailler sur une synthèse de connaissances en JS, en particulier sur les fonctions et les instructions if.

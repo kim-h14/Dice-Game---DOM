@@ -158,8 +158,6 @@ body {
   font-size: 20px;
 }
 
-/* Add this to your existing CSS */
-
 .modal {
   display: none;
   position: fixed;

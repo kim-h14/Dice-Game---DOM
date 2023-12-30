@@ -101,16 +101,6 @@ function newGame() {
 
 // Function to check winner
 
-// function checkWinner() {
-//   if (globalP1 >= 100) {
-//     alert("🎉 Player 1 Wins 🎉")
-//     newGame();
-//   } else if (globalP2 >= 100) {
-//     alert("🎉 Player 2 Wins 🎉")
-//     newGame();
-//   }
-// } 
-
 function checkWinner() {
   let winnerMessage = "";
   let modal = document.getElementById("winnerModal");
@@ -147,3 +137,4 @@ function turnIndicator() {
     document.querySelector(".player2Indicator").style.display = "inline-block";
   }
 }
+

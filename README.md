@@ -1,5 +1,11 @@
 * English version: *
 
+# Boost your website with Javascript
+
+## Context
+
+**Creation of a small browser game using the DOM.**
+
 Rules of the game:
 The game features 2 players on a single screen.
 Each player has a temporary score (Round) and a global score (Global).
@@ -11,7 +17,17 @@ During his turn, the player can decide at any time to:
 
 The first player to reach 100 points on Global wins the game.
 
+### Languages and Frameworks: HTML, CSS, JavaScript and Bootstrap
+It was mainly used to work on a JS wrapup praticularly working on functions and if statements.
+
+
 * French version: *
+
+# Dynamiser vos sites web avec Javascript
+
+## Context
+
+**Création d'un petit jeu sur navigateur web à l'aide du DOM.**
 
 Règles du jeu:
 Le jeu comprend 2 joueurs sur un seul et même écran.
@@ -23,3 +39,6 @@ Lors de son tour, le joueur peut décider à tout moment de:
 - Lancer le dé. Si il obtient un 1, son score Round est perdu et c'est la fin de son tour.
 
 Le premier joueur qui atteint les 100 points sur Global gagne le jeu.
+
+### Langages and Frameworks: HTML, CSS, JavaScript et Bootstrap
+Il a été principalement utilisé pour travailler sur une synthèse de connaissances en JS, en particulier sur les fonctions et les instructions if.
